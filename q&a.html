@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A</title>
+    <link rel="stylesheet" href="shopping.css">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="asset/Logo1 1.svg" alt="Logo" class="logo">
+    </div>
+    <div class="sidebar" id="sidebar">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <img src="asset/menu1.svg" alt="menu">
+        </div>
+        <ul class="menu-items">
+            <li><a href="#"><span><div class="nickname">닉네임</div>
+                <div class="email">이메일주소</div></span>
+                <img src="asset/Logout.svg" alt="Logout Icon"></a></li>
+            <li><a href="#"><img src="asset/Vector.svg" alt="Heart Icon"><span>메인</span></a></li>
+            <li><a href="#"><img src="asset/Vector-2.svg" alt="Cart Icon"><span>목표 쇼핑</span></a></li>
+            <li><a href="#"><img src="asset/Vector-3.svg" alt="Community Icon"><span>커뮤니티</span></a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="title"><h1>목표 쇼핑</h1></div>
+        <div id="goal-summary" class="goal-summary">
+            <!-- Goal summary will be inserted here dynamically -->
+        </div>
+        <div class="qa-section">
+            <h2>Q&A</h2>
+            <div id="qa-container">
+                <!-- Q&A items will be inserted here dynamically -->
+                <div class="qa-item">
+                    <div class="qa-question">
+                        <img src="asset/Logo2 1.svg" alt="Question Icon">할아버지의파란필름
+                        <span>보통 무슨 요일에 요가를 하시나요?</span>
+                    </div>
+                    <div class="qa-answer">
+                        <img src="asset/Reply.svg" alt="Reply Icon">
+                        <span>말하는 감자</span>
+                        화, 목, 토 이렇게 이틀에 한 번씩 하는 편입니다!
+                    </div>
+                </div>
+            </div>
+            <div class="qa-form">
+                <input type="text" id="qa-input" placeholder="질문을 작성하세요.">
+                <button onclick="submitQuestion()">전송</button>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Pretendard-Regular';
+    margin: 0;
+    padding: 0;
+    background-color: #f1f5ee;
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 100px; /* Adjust this value to position the logo correctly */
+    z-index: 1;
+}
+
+.logo {
+    width: 116.7px;
+    height: 83px;
+    margin-left: 30px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 104px;
+    height: 100vh;
+    background-color: #fff;
+    border-radius: 3%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s;
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.sidebar.active {
+    width: 266px;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.menu-items {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+    flex-grow: 1;
+    margin-top: 70px;
+}
+
+.menu-items li {
+    padding: 30px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.menu-items li a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+    padding-left: 20px;
+    width: 100%;
+}
+
+.menu-items li a img {
+    height: 24px;
+    margin-right: 10px;
+}
+
+.menu-items li a span {
+    display: none;
+}
+
+.sidebar.active .menu-items li a span {
+    display: inline-block;
+}
+
+.menu-items li:hover {
+    background-color: #f0f0f0;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 80px; /* Ensure content is not hidden under the sidebar */
+    transition: margin-left 0.3s;
+}
+
+.sidebar.active ~ .content {
+    margin-left: 200px; /* Adjust content margin when sidebar is expanded */
+}
+
+.title{
+    font-size: medium;
+    margin-top: 130px;
+    margin-left: 100px;
+}
