@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q&A</title>
-    <link rel="stylesheet" href="shopping.css">
+    <title>큐엔에이</title>
+    <link rel="stylesheet" href="q&a.css">
 </head>
 <body>
     <div class="logo-container">
@@ -23,30 +23,43 @@
             <li><a href="#"><img src="asset/Vector-3.svg" alt="Community Icon"><span>커뮤니티</span></a></li>
         </ul>
     </div>
-    <div class="content">
+    
+    <div id="contents">
         <div class="title"><h1>목표 쇼핑</h1></div>
-        <div id="goal-summary" class="goal-summary">
-            <!-- Goal summary will be inserted here dynamically -->
+        <div class="goal-info-box">
+            <div class="goal-title">주 3회 요가</div>
+            <div class="goal-details">
+                <div class="goal-frequency">일주일에 <strong>3회</strong></div>
+                <div class="goal-duration">1회당 1시간 30분 소요</div>
+            </div>
         </div>
-        <div class="qa-section">
-            <h2>Q&A</h2>
-            <div id="qa-container">
-                <!-- Q&A items will be inserted here dynamically -->
-                <div class="qa-item">
-                    <div class="qa-question">
-                        <img src="asset/Logo2 1.svg" alt="Question Icon">할아버지의파란필름
-                        <span>보통 무슨 요일에 요가를 하시나요?</span>
+        <div class="review-section">
+            <div class="tabs">
+                <div class="tab review-tab active">리뷰</div>
+                <a href="q&a.html" class="tab qna-tab">Q&A</a>
+            </div>
+            <div class="review-box">
+                <form id="reviewForm">
+                    <div class="review-input-box">
+                        <input type="text" id="reviewInput" placeholder="리뷰를 작성하세요." class="review-textbox">
+                        <button type="submit" class="submit-review">➤</button>
                     </div>
-                    <div class="qa-answer">
-                        <img src="asset/Reply.svg" alt="Reply Icon">
-                        <span>말하는 감자</span>
-                        화, 목, 토 이렇게 이틀에 한 번씩 하는 편입니다!
+                </form>
+                <div id="reviewList" class="review-list">
+                    <div class="review">
+                        <div class="review-user">
+                            <img src="asset/user_icon.svg" alt="User Icon" class="user-icon">
+                            <span class="username">헬아버지의피트플린</span>
+                        </div>
+                        <div class="review-content">
+                            요가 시작하면서 거북목이나 척추측만증 때문에 생기던 근육통이 많이 줄고 하루가 조금 더 알차게 느껴져요!
+                        </div>
+                        <div class="review-actions">
+                            <button class="thumbs-up"><img src="Thumbs Up.svg" alt="Thumbs Up"></button>
+                            <button class="thumbs-down"><img src="Thumbs Down.svg" alt="Thumbs Down"></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="qa-form">
-                <input type="text" id="qa-input" placeholder="질문을 작성하세요.">
-                <button onclick="submitQuestion()">전송</button>
             </div>
         </div>
     </div>

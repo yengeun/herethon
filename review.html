@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Review</title>
+    <title>목표 쇼핑</title>
     <link rel="stylesheet" href="review.css">
 </head>
 <body>
@@ -26,13 +26,39 @@
     
     <div id="contents">
         <div class="title"><h1>목표 쇼핑</h1></div>
+        <div class="goal-info-box" id="goalInfoBox">
+            <!-- Goal information will be inserted here by JavaScript -->
+        </div>
+        <div class="review-section">
+            <div class="tabs">
+                <div class="tab review-tab active">리뷰</div>
+                <a href="q&a.html" class="tab qna-tab">Q&A</a>
+            </div>
+            <div class="review-box">
+                <form id="reviewForm">
+                    <div class="review-input-box">
+                        <input type="text" id="reviewInput" placeholder="리뷰를 작성하세요." class="review-textbox">
+                        <button type="submit" class="submit-review"><img src="asset/Send.svg" alt="Send"></button>
+                    </div>
+                </form>
+                <div id="reviewList" class="review-list">
+                    <div class="review">
+                        <div class="review-user">
+                            <img src="asset/Logo2 1.svg" alt="User Icon" class="user-icon">
+                            <span class="username">헬아버지의피트플린</span>
+                        </div>
+                        <div class="review-content">
+                            요가 시작하면서 거북목이나 척추측만증 때문에 생기던 근육통이 많이 줄고 하루가 조금 더 알차게 느껴져요!
+                        </div>
+                        <div class="review-actions">
+                            <button class="thumbs-up"><img src="asset/Thumbs Up.svg" alt="Thumbs Up"></button>
+                            <button class="thumbs-down"><img src="asset/Thumbs Down.svg" alt="Thumbs Down"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script>
-        function toggleMenu() {
-                var sidebar = document.getElementById("sidebar");
-                sidebar.classList.toggle("active");
-        }
-    </script>
-    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
