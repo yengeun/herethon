@@ -1,0 +1,302 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Pretendard-Regular';
+    margin: 0;
+    padding: 0;
+    background-color: #f1f5ee;
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 100px; /* Adjust this value to position the logo correctly */
+    z-index: 1;
+}
+
+.logo {
+    width: 116.7px;
+    height: 83px;
+    margin-left: 30px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 104px;
+    height: 100vh;
+    background-color: #fff;
+    border-radius: 3%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s;
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.sidebar.active {
+    width: 266px;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.menu-items {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+    flex-grow: 1;
+    margin-top: 70px;
+}
+
+.menu-items li {
+    padding: 30px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.menu-items li a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+    padding-left: 20px;
+    width: 100%;
+}
+
+.menu-items li a img {
+    height: 24px;
+    margin-right: 10px;
+}
+
+.menu-items li a span {
+    display: none;
+}
+
+.sidebar.active .menu-items li a span {
+    display: inline-block;
+}
+
+.menu-items li:hover {
+    background-color: #f0f0f0;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 80px; /* Ensure content is not hidden under the sidebar */
+    transition: margin-left 0.3s;
+}
+
+.sidebar.active ~ .content {
+    margin-left: 200px; /* Adjust content margin when sidebar is expanded */
+}
+
+.title{
+    font-size: medium;
+    margin-top: 10%;
+}
+
+.category-buttons button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+.category-buttons button + button {
+    margin-left:10px;
+}
+
+.category-buttons button:hover {
+    background-color: black;
+    color: #fff;
+}
+
+.category-buttons .forGrove-btn{
+    color: white;
+    background-color: #7db249; /* Green background for the forGrove button */
+}
+
+.category-buttons .forGrove-btn:hover {
+    background-color: #7db249; /* Darker green on hover */
+}
+
+
+
+#goals-container {
+    display: flex;
+    flex-direction: row; 
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px; 
+    margin-left: 10px;
+    transition: margin-left 0.3s;
+}
+
+.sidebar.active ~ #goals-container {
+    margin-left: 200px;
+}
+
+
+.sidebar.active ~ #goals-container {
+    margin-left: 200px;
+}
+
+.goal-card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+    width: 500px;
+    height: 400px
+
+}
+
+
+.goal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.goal-header .logo-background {
+    background-color: white;
+    border-style: solid;
+    border-width: 3px;
+    border-color:#e0e0e0;
+    border-radius: 50%;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -10px;
+}
+
+.goal-header img {
+    width: 60px;
+    height: 60px;
+}
+
+.goal-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 80px;
+}
+
+.goal-nickname {
+    font-size: 11px;
+    color: #888;
+    position: absolute;
+    left: 80px;
+    top: 0;
+}
+
+.goal-type {
+    background-color: #7db249;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-weight: medium;
+    margin-left: auto;
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+.cart-icon {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.goal-info {
+    display: flex;
+    margin-top: 20px;
+}
+
+.goal-info img {
+    border-radius: 8px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+.goal-details {
+    flex-grow: 1;
+    margin-left: 30px;
+}
+
+.goal-details p {
+    margin: 10px 0;
+}
+
+.goal-details .highlight {
+    background-color: #f5f5f5;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: lighter;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+
+
+.goal-actions {
+    display: flex;
+    justify-content: right;
+    margin-top: -35px; 
+}
+
+
+.goal-actions button {
+    background-color: #d8cbb8;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 10px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.goal-actions button:hover {
+    background-color: #b8a98c;
+}
+
+.goal-card hr {
+    border-top: 1px solid #e0e0e0;
+    margin: 100px; 
+    margin-left: 0;
+    position: absolute;
+    width: 90%;
+    top: 0;
+}
