@@ -18,7 +18,7 @@ body {
 .logo-container {
     position: absolute;
     top: 20px;
-    left: 100px; /* Adjust this value to position the logo correctly */
+    left: 100px;
     z-index: 1;
 }
 
@@ -111,7 +111,7 @@ body {
     margin-left: 266px;
 }
 
-.title{
+.title {
     font-size: medium;
     margin-top: 10%;
 }
@@ -170,6 +170,7 @@ body {
     height: 24px;
     cursor: pointer;
 }
+
 .goal-separator {
     width: 100%;
     border: 1px solid #e0e0e0;
@@ -186,7 +187,7 @@ body {
 .tabs {
     display: flex;
     margin-top: 50px;
-    width: 200px;;
+    width: 200px;
 }
 
 .tab {
@@ -215,8 +216,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
+
 .review-input-box {
     display: flex;
     align-items: center;
@@ -224,6 +225,7 @@ body {
     width: 100%;
     justify-content: center;
 }
+
 .review-textbox {
     width: 100%;
     max-width: 300px;
@@ -234,6 +236,7 @@ body {
     margin-bottom: 0px;
     position: absolute;
 }
+
 .submit-review {
     background-color: #4caf50;
     color: white;
@@ -257,7 +260,6 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
 
 .review-user {
     display: flex;
@@ -288,14 +290,13 @@ body {
 
 .review-actions {
     display: flex;
-    margin-top: -60px
+    margin-top: -60px;
 }
 
 .review-actions button {
     background: none;
     border: none;
     cursor: pointer;
-    
 }
 
 .review-actions button img {
